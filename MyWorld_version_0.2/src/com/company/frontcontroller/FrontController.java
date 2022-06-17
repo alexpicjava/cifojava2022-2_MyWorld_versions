@@ -2,13 +2,16 @@ package com.company.frontcontroller;
 
 import com.company.controller.Controller;
 import com.company.utils.Utilities;
+import com.company.model.User;
+import com.company.view.Menu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FrontController {
 
 
-    public static void mainLoop(Scanner reader) {
+    public static void mainLoop(Scanner reader, ArrayList<User> users) {
 
         while (true) {
 
@@ -22,13 +25,13 @@ public class FrontController {
                 Controller.createUser(reader, users);
             } else if (command.equals("changePin")) {
                 //call-operation to change pin
-                changePin(reader, users);
+                Controller.changePin(reader, users);
             } else if (command.equals("transfer")) {
                 //call-operation to make transfer
-                transfer(reader, users);
+                Controller.transfer(reader, users);
             } else if (command.equals("deposit")) {
                 //call-operation to deposit, to charge, to add some money to the card
-                deposit(reader, users);
+                Controller.deposit(reader, users);
             } else {
                 System.out.println("Unknown command!");
             }

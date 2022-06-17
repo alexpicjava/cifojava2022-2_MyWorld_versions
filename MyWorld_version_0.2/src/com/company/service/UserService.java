@@ -68,7 +68,7 @@ public class UserService {
         users.get(destinationPosition).getCard().addAmount(amount);
     }
 
-    private static void makeDeposit(int position, Double amount, ArrayList<User> users) {
+    public static void makeDeposit(int position, Double amount, ArrayList<User> users) {
         //add this qty amount from position
         users.get(position).getCard().addAmount(amount);
     }
