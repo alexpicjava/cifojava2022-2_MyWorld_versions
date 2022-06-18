@@ -1,10 +1,10 @@
-package com.company;
+package com.company.model;
 
 public class User {
 
-    private String name;
-    private String surname;
-    private int age;
+    String name;
+    String surname;
+    int age;
     Card card;
 
     public User() {
@@ -57,11 +57,11 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "\n\tUser{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", card=" + card +
-                '}';
+                "}";
     }
 }
